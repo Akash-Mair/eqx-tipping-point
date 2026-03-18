@@ -147,7 +147,7 @@ let main _ =
             do! service.TryAdd(counterID, "user", "add to account", i ) |> Async.Ignore
 
         for i in 1..400 do            
-        do! service.TrySubtract(counterID, "user", i ) |> Async.Ignore
+            do! service.TrySubtract(counterID, "user", i ) |> Async.Ignore
     
         printfn "done!"
     }
