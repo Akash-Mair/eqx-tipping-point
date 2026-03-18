@@ -123,7 +123,7 @@ let main _ =
     
         let service : Counter.Service =
             let dynamoStoreClient = DynamoStoreClient(dynamo)
-            let context = DynamoStoreContext(dynamoStoreClient, "test_delete_eqx_test")
+            let context = DynamoStoreContext(dynamoStoreClient, "table")
             let accessStrategy = AccessStrategy.Unoptimized
             let cache = Cache("counter", sizeMb = 50)
             let caching = CachingStrategy.SlidingWindow(cache, TimeSpan.FromMinutes(20.))
